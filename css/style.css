@@ -1,0 +1,462 @@
+@chatset: UTF-8;
+@font-face{
+	font-family: inmueble;
+	src: url("../assets/fonts/inmueble.otf");
+}
+@font-face{
+	font-family: inmueble2;
+	src: url("../assets/fonts/inmueble2.ttf");
+}
+@font-face{
+	font-family: inmueble2-bold;
+	src: url("../assets/fonts/inmueble2-bold.ttf");
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0px;
+	height: 100%;
+}
+.content{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* HEADER */
+header{
+	position: relative;
+	width: 100%; height: 15%;
+	padding: 1% 7.5%;
+	background-color: #f6f5f5;
+	border-bottom: 5px solid #e8e8e7;
+	box-shadow: 0 5px 20px 0 rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
+}
+.logo, .nombre, nav{
+	display: inline-block;
+	vertical-align: top;
+}
+.logo{
+	background-image: url("../assets/icon-mueble.png");
+	width: 70px;
+	height: 70px;
+	background-size: 100% 100%;
+}
+.nombre{
+	position: relative;
+	width: 30%;
+	font-size: 25px;
+	font-family: inmueble;
+	margin-left: 1%;
+	text-shadow: rgb(179, 179, 166) 2px 2px 2px;
+}
+nav{
+	width: 60%;
+	padding: 0 20px;
+}
+nav ul{
+	list-style: none;
+	height: 100%;
+}
+nav ul li{
+	display: block;
+	width: 25%;
+	text-align: center;
+	float: left;
+}
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	height: 90%;
+	color: black;
+	font-family: inmueble2;
+	transition: color 0.2s linear;
+}
+nav ul li .line-menu{
+	width: 0%;
+	height: 2px;
+	background-color: #f25100;
+	transition: width 0.5s linear;
+}
+nav ul li:hover .line-menu{
+	width: 100%;
+}
+nav ul li:hover a{
+	color: #f25100;
+}
+.icon-market{
+	background-color: #f95c0e;
+	border-radius: 2px;
+	padding: 5px;
+	cursor: pointer;
+}
+.icon-market span{
+	color: #fff;
+}
+.icon-market:hover{
+	background-color: #f25100;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+/***** FIN HEADER *****/
+
+/***** SECTION *****/
+
+section{
+	position: relative;
+	width: 100%;
+}
+
+/* TITULO SECTION */
+
+section .titulos-prin{
+	font-family: inmueble2-bold;
+	margin: 2% 0;
+}
+section .titulos-prin span{
+	background-color: #f25100;
+	border-radius: 100%;
+	padding: 0.5%;
+	color: #fff;
+	margin: 2px;
+}
+
+/* SLIDER */
+
+.section_slider{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background-color: #f6f5f5;
+	-webkit-display: flex;
+	-moz-display: flex;
+    display:         flex;
+    -webkit-align-items: center;
+	-moz-align-items: center;
+    align-items: center;
+}
+
+.prev, .prox{
+	width: 40px;
+	height: 40px;
+	margin: 0 5px;
+	z-index: 100;
+	position: absolute;
+	border-radius: 3px;
+	background-size: 80% 80%;
+	transition: background-color 1s;
+	background-color: rgba(0, 0, 0, 0.3);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.prox{
+	background-image: url("../assets/prox.jpg");
+	right: 5px;
+}
+.prev{
+	background-image: url("../assets/prev.jpg");
+}
+.prev:hover, .prox:hover{
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section_slider .slider{
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	/* background-attachment: fixed; */
+}
+.slider1{
+	background-image: url("../assets/slider1.jpg");
+}
+.slider2{
+	background-image: url("../assets/slider2.jpg");
+}
+.slider3{
+	background-image: url("../assets/slider3.jpg");
+}
+
+/* ARTICULOS PRINCIPALES PRODUCTOS */
+
+.article_principal, .article_productos_prin{
+	position: relative;
+	width: 100%;
+	padding: 5% 7.5%;
+	background-color: #f6f5f5;
+}
+
+.article_principal{
+	min-height: 100px;
+}
+
+.article_principal h2, .article_productos_prin h2{
+	text-align: center;
+	margin-bottom: 2%;
+	font-family: inmueble2-bold;
+}
+.article_principal p{
+	text-align: justify;
+	font-family: inmueble2;
+}
+
+.article_productos_prin{
+	width: 100%;
+	height: 400px;
+	background-image: url("../assets/article_productos_prin.jpg");
+	background-size: cover;
+}
+
+.article_productos_prin .producto_min{
+	position: relative;
+	width: 24.5%;
+	height: 90%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: rgba(246,245,245, 0.7);
+	box-shadow: 0 5px 30px rgba(0,0,0,0.19);
+	border-radius: 2px;
+	padding: 1%;
+	text-align: center;
+}
+
+.article_productos_prin h2{
+	color: #f6f5f5;
+}
+
+.article_productos_prin .producto_min .img_producto_min{
+	width: 100%;
+	height: 70%;
+}
+
+.article_productos_prin .producto_min h4{
+	width: 100%;
+	height: 18%;
+	text-align: center;
+	font-family: inmueble2-bold;
+}
+
+.button_ver{
+	background-color: #f95c0e;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	padding: 5px;
+	margin: 2px auto;
+	color: #fff;
+	font-family: inmueble2;
+	width: 50%;
+}
+
+.button_ver:hover{
+	background-color: #f25100;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	font-family: inmueble2-bold;
+}
+/* SECTION CATALOGO */
+
+.section-class{
+	padding: 2% 7.5%;
+}
+
+.section-categorias{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	margin: 3% 0;
+}
+
+.section-categorias .art{
+	width: 33%;
+	height: 100%;
+	background-size: 100% 100%;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	box-shadow: 0 5px 30px rgba(0,0,0,0.19);
+	position: relative;
+}
+
+.art_comercial{
+	background-image: url("../assets/comercial.jpg");
+}
+.art_industrial{
+	background-image: url("../assets/industrial.jpg");
+}
+.art_oficina{
+	background-image: url("../assets/escritorio.jpg");
+}
+
+.section-categorias .art .desc-producto{
+	position: absolute;
+	bottom: -115px;
+	width: 100%;
+	transition: bottom 1s linear;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+}
+
+.section-categorias .art .desc-producto h3{
+	position: relative;
+	font-family: inmueble2-bold;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	padding: 3% 1% 5% 1%;
+	text-decoration: underline;
+}
+.section-categorias .art .desc-producto p{
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	font-family: inmueble2;
+	color: white;
+	padding: 0% 10% 1% 10%;
+	opacity: 0;
+	transition: opacity 1s linear;
+}
+.section-categorias .art .desc-producto button{
+	opacity: 0;
+	transition: opacity 1s linear;
+	margin-bottom: 3%;
+}
+.section-categorias .art:hover .desc-producto{
+	bottom: 0px;
+}
+.section-categorias .art:hover .desc-producto p, .section-categorias .art:hover .desc-producto button{
+	opacity: 1;
+}
+
+.ofertas{
+	width: 100%;
+	height: 250px;
+	margin: 2% 0;
+}
+
+.producto-oferta{
+	width: 19.5%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	background-color: rgba(246,245,245, 0.7);
+	box-shadow: 0 5px 30px rgba(0,0,0,0.19);
+}
+
+.img-producto{
+	width: 100%;
+	height: 70%;
+}
+
+.producto-oferta h5{
+	font-family: inmueble2;	
+	width: 100%;
+	height: 35px;
+	overflow: hidden;
+	padding: 1%;
+}
+
+.producto-oferta h6 s{
+	color: grey;
+}
+.producto-oferta h3{
+	color: #f25100;
+}
+/***** FIN SECTION *****/
+
+/***** FOOTER *****/
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	padding: 2% 7.5%;
+	font-family: inmueble2;
+	background-color: #f6f5f5;
+	border-top: 5px solid #e8e8e7;
+	box-shadow: 0 -5px 20px 0 rgba(0,0,0,0.3);
+}
+
+footer .redesSociales, .menuFooter, .copyrigth{
+	width: 32.5%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+footer .redesSociales, .menuFooter{
+	border-right: 2px solid rgba(183, 169, 169, 0.5);
+	
+}
+
+footer .redesSociales ul, footer .menuFooter ul{
+	list-style: none;
+}
+
+footer .menuFooter ul{
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+footer .redesSociales ul li, footer .menuFooter ul li{
+	margin: 1% 0;
+	padding: 0 5% 0 0;
+}
+
+footer .redesSociales ul li span, footer .menuFooter ul li span{
+	font-size: 22px;
+	margin-right: 3%;
+	color: #f25100;
+}
+
+footer .redesSociales ul li a, footer .menuFooter ul li a{
+	text-decoration: none;
+	color: #000;
+}
+
+footer .redesSociales ul li .line-rs, footer .menuFooter ul li .line-mf{
+	width: 0%;
+	height: 2px;
+	background-color: #f25100;
+	transition: width 1s linear;
+}
+footer .redesSociales ul li:hover .line-rs, footer .menuFooter ul li:hover .line-mf{
+	width: 100%;
+}
+
+footer .redesSociales ul li:hover a, footer .menuFooter ul li:hover a{
+	color: #f25100;
+}
+
+footer .copyrigth{
+	text-align: center;
+}
+
+footer .copyrigth img{
+	width: 40%;
+	height: 50%;
+}
+
+footer .copyrigth label, footer .copyrigth a{
+	font-size: 12px;
+}
+
+/***** FIN FOOTER *****/
+
+/***** MEDIA QUERY ****/
+
+@media screen and (min-width: 1025px) {
+  .article_productos_prin{
+	  height: 520px;
+  }
+  
+  footer .redesSociales ul li span, footer .menuFooter ul li span{
+	  font-size: 19px;
+  }
+}
